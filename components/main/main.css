@@ -1,6 +1,4 @@
 .main { 
-    max-width: 1440px;
-    height: 1036px;
     background: var(--white-2);
 }
 
@@ -13,8 +11,8 @@
 }
 
 .main__card {
-    width: 350px;
-    height: 367px;
+    max-width: 350px;
+    min-height: 367px;
     background-color: var(--white);
     box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
     border-radius: 12px;
