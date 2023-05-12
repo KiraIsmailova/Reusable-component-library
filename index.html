@@ -1,29 +1,393 @@
 <!DOCTYPE html>
 <!-- Главная страница -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="./assets/css/main.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-<header class="header">
-    <h1 class="header__title">Reusable component library</h1>
-</header>
-<main class="main">
-    <div class="container">
-    <div class="main__container">
-    <div class="main__card"></div>
-    <div class="main__card"></div>
-    <div class="main__card"></div>
-    <div class="main__card"></div>
-    <div class="main__card"></div>
-    <div class="main__card"></div>
-</div>
-</div>
-</main>
-<footer class="footer">
-    <h2 class="footer__title">About</h2>
-    <p class="footer__text">This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.</p>
-</footer>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML/CSS project</title>
+</head>
+
+<body class="page" data-info="Data from body">
+
+    <section class="headerBlock" data-some="Hello Kira">
+        <div class="container">
+            <header class="header">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <svg class="burger__icon" width="110" height="32" viewBox="0 0 110 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_18829_459)">
+                                <rect y="1" width="30" height="30" fill="var(--black)" />
+                                <rect x="38" width="32" height="32" rx="16" fill="var(--black)" />
+                                <path d="M78 0L110 32H78V0Z" fill="var(--black)"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_18829_459">
+                                    <rect width="110" height="32" fill="var(--white)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="header__icons">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_17868_394)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12Z"
+                                    fill="#DDE2E5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 0C12.5523 0 13 0.447715 13 1V3C13 3.55228 12.5523 4 12 4C11.4477 4 11 3.55228 11 3V1C11 0.447715 11.4477 0 12 0Z"
+                                    fill="#DDE2E5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 20C12.5523 20 13 20.4477 13 21V23C13 23.5523 12.5523 24 12 24C11.4477 24 11 23.5523 11 23V21C11 20.4477 11.4477 20 12 20Z"
+                                    fill="#DDE2E5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M3.51286 3.51286C3.90339 3.12234 4.53655 3.12234 4.92708 3.51286L6.34708 4.93286C6.7376 5.32339 6.7376 5.95655 6.34708 6.34708C5.95655 6.7376 5.32339 6.7376 4.93286 6.34708L3.51286 4.92708C3.12234 4.53655 3.12234 3.90339 3.51286 3.51286Z"
+                                    fill="#DDE2E5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.653 17.6529C18.0435 17.2624 18.6767 17.2624 19.0672 17.6529L20.4872 19.0729C20.8777 19.4634 20.8777 20.0966 20.4872 20.4871C20.0967 20.8776 19.4635 20.8776 19.073 20.4871L17.653 19.0671C17.2625 18.6766 17.2625 18.0434 17.653 17.6529Z"
+                                    fill="#DDE2E5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 12C0 11.4477 0.447715 11 1 11H3C3.55228 11 4 11.4477 4 12C4 12.5523 3.55228 13 3 13H1C0.447715 13 0 12.5523 0 12Z"
+                                    fill="#DDE2E5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20 12C20 11.4477 20.4477 11 21 11H23C23.5523 11 24 11.4477 24 12C24 12.5523 23.5523 13 23 13H21C20.4477 13 20 12.5523 20 12Z"
+                                    fill="#DDE2E5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.34708 17.6529C6.7376 18.0434 6.7376 18.6766 6.34708 19.0671L4.92708 20.4871C4.53655 20.8776 3.90339 20.8776 3.51286 20.4871C3.12234 20.0966 3.12234 19.4634 3.51286 19.0729L4.93286 17.6529C5.32339 17.2624 5.95655 17.2624 6.34708 17.6529Z"
+                                    fill="#DDE2E5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.4872 3.51286C20.8777 3.90339 20.8777 4.53655 20.4872 4.92708L19.0672 6.34708C18.6767 6.7376 18.0435 6.7376 17.653 6.34708C17.2625 5.95655 17.2625 5.32339 17.653 4.93286L19.073 3.51286C19.4635 3.12234 20.0967 3.12234 20.4872 3.51286Z"
+                                    fill="#DDE2E5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_17868_394">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <label class="toggler">
+                            <input class="toggler__input" type="checkbox" id="theme-changer">
+                            <span class="toggler__state"></span>
+                            <span class="toggler__text"></span>
+                        </label>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.0811 0.509041C10.2746 0.852424 10.2484 1.27745 10.0141 1.59442C9.15985 2.75008 8.74879 4.17395 8.85566 5.60706C8.96254 7.04018 9.58023 8.38733 10.5964 9.40351C11.6126 10.4197 12.9597 11.0374 14.3929 11.1443C15.826 11.2511 17.2498 10.8401 18.4055 9.98585L18.9999 10.79L19.9957 10.882C19.8209 12.7734 19.1111 14.5758 17.9493 16.0785C16.7875 17.5811 15.2218 18.7218 13.4353 19.3671C11.6489 20.0124 9.71564 20.1355 7.86177 19.7221C6.0079 19.3088 4.3101 18.376 2.96702 17.0329C1.62394 15.6898 0.691147 13.992 0.277778 12.1381C-0.135591 10.2843 -0.0124347 8.35102 0.632836 6.56459C1.27811 4.77816 2.4188 3.21244 3.92145 2.05065C5.4241 0.88886 7.22654 0.179044 9.11788 0.00425972C9.51037 -0.0320113 9.88755 0.165658 10.0811 0.509041ZM17.5608 12.6836C16.5077 13.0646 15.3781 13.2233 14.2441 13.1387C12.3333 12.9962 10.5371 12.1726 9.1822 10.8177C7.82729 9.46282 7.0037 7.66661 6.8612 5.7558C6.77664 4.62183 6.93528 3.4922 7.31629 2.43908C6.53868 2.72043 5.8055 3.12204 5.14478 3.63289C3.94266 4.56232 3.0301 5.81489 2.51389 7.24404C1.99767 8.67318 1.89914 10.2198 2.22984 11.7029C2.56054 13.186 3.30677 14.5442 4.38123 15.6187C5.45569 16.6931 6.81394 17.4394 8.29703 17.7701C9.78013 18.1008 11.3267 18.0022 12.7559 17.486C14.185 16.9698 15.4376 16.0573 16.367 14.8551C16.8779 14.1944 17.2795 13.4612 17.5608 12.6836Z"
+                                fill="#DDE2E5" />
+                        </svg>
+
+                    </div>
+                </div>
+                <h1 class="header__title header__title-mar">Reusable component library</h1>
+                <!-- <h1 class="header__title header__title-mar">Поток - верхние элмементы толкают вниз нижестоящие элементы</h1> -->
+                
+                <div class="tabs">
+                    <input class="tabs__input tabs__input-1" type="radio" name="tab-btn" id="headerTab1" checked>
+                    <label class="tabs__label" for="headerTab1">All components</label>
+                    <input class="tabs__input tabs__input-2" type="radio" name="tab-btn" id="headerTab2">
+                    <label class="tabs__label" for="headerTab2">Atoms</label>
+                    <input class="tabs__input tabs__input-3" type="radio" name="tab-btn" id="headerTab3">
+                    <label class="tabs__label" for="headerTab3">Molecules</label>
+                    <input class="tabs__input tabs__input-4" type="radio" name="tab-btn" id="headerTab4">
+                    <label class="tabs__label" for="headerTab4">Organisms</label>
+                </div>
+            </header>
+        </div>
+    </section>
+
+    <section class="mainBlock">
+        <div class="container">
+            <main class="main">
+             
+                    <!-- <hr class="tabs__divider"> -->
+                    <div class="tab__content active" id="headerTab1-content">
+                        <div class="main__container">
+                            
+                            <a href="05-lection3/01-tooltip/index.html" class="main__link">
+                                <div class="main__card">
+                                    <div class="card__body">
+                                        <div class="tooltip">
+                                            <div class="tooltip__trigger">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"
+                                                        fill="#212429" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M12.2581 8.02432C11.7926 7.94447 11.3138 8.03195 10.9066 8.27126C10.4994 8.51058 10.1901 8.88629 10.0333 9.33184C9.85006 9.85283 9.27914 10.1266 8.75815 9.94333C8.23716 9.76006 7.96339 9.18915 8.14666 8.66816C8.46013 7.77705 9.07886 7.02563 9.89327 6.547C10.7077 6.06837 11.6652 5.89341 12.5962 6.05311C13.5273 6.2128 14.3717 6.69686 14.9801 7.41953C15.5883 8.14205 15.9213 9.05648 15.92 10.0009C15.9195 11.5313 14.7849 12.5419 13.9747 13.082C13.5391 13.3725 13.1105 13.586 12.7949 13.7263C12.6356 13.7971 12.5015 13.8508 12.4049 13.8876C12.3565 13.906 12.3173 13.9203 12.2887 13.9305L12.254 13.9427L12.2429 13.9464L12.239 13.9478L12.2375 13.9483C12.2372 13.9484 12.2362 13.9487 11.92 13L12.2362 13.9487C11.7123 14.1233 11.146 13.8402 10.9713 13.3162C10.7968 12.7926 11.0794 12.2267 11.6027 12.0517L11.6014 12.0521C11.6015 12.0521 11.6016 12.052 11.6027 12.0517L11.6187 12.0461C11.6341 12.0406 11.6593 12.0314 11.6929 12.0186C11.7603 11.9929 11.8606 11.9529 11.9826 11.8987C12.2294 11.789 12.5509 11.6275 12.8653 11.4179C13.5549 10.9582 13.92 10.4691 13.92 10L13.92 9.99851C13.9207 9.52619 13.7542 9.06886 13.45 8.70753C13.1459 8.34619 12.7236 8.10417 12.2581 8.02432Z"
+                                                        fill="#212429" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M12 15C12.5523 15 13 15.4477 13 16V16.5C13 17.0523 12.5523 17.5 12 17.5C11.4477 17.5 11 17.0523 11 16.5V16C11 15.4477 11.4477 15 12 15Z"
+                                                        fill="#212429" />
+                                                </svg>
+                                            </div>
+                                            <div class="tooltip__bubble">Helper Text</div>
+
+                                        </div>
+                                    </div>
+                                    <div class="card__footer">
+                                        <h4>Tooltip</h4>
+                                        <p>Atom</p>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="05-lection3/02-modal/index.html" class="main__link">
+                                <div class="main__card">
+                                    <div class="card__body">
+                                        <div class="modal" id="modal">
+                                            <div class="modal__container">
+                                                <svg class="modal__cross" id="modal-close" width="16" height="16"
+                                                    viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M12.4714 3.52861C12.7318 3.78896 12.7318 4.21107 12.4714 4.47141L4.47141 12.4714C4.21107 12.7318 3.78896 12.7318 3.52861 12.4714C3.26826 12.2111 3.26826 11.789 3.52861 11.5286L11.5286 3.52861C11.789 3.26826 12.2111 3.26826 12.4714 3.52861Z"
+                                                        fill="#495057" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M3.52861 3.52861C3.78896 3.26826 4.21107 3.26826 4.47141 3.52861L12.4714 11.5286C12.7318 11.789 12.7318 12.2111 12.4714 12.4714C12.2111 12.7318 11.789 12.7318 11.5286 12.4714L3.52861 4.47141C3.26826 4.21107 3.26826 3.78896 3.52861 3.52861Z"
+                                                        fill="#495057" />
+                                                </svg>
+                                                <h2 class="modal__title">Modal title</h2>
+                                                <p class="modal__text">Amet minim mollit non deserunt ullamco est sit
+                                                    aliqua
+                                                    dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                                                    Exercitation veniam consequat sunt nostrud amet.
+                                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                                                    sint. Velit officia consequat duis enim velit mollit. Exercitation
+                                                    veniam consequat sunt nostrud amet.</p>
+                                            </div>
+                                        </div>
+                                        <button class="button button_primary" id="modal-open">Open modal</button>
+                                    </div>
+                                    <div class="card__footer">
+                                        <h4>Modal</h4>
+                                        <p>Organism</p>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="04-lection2/01-histogram/index.html" class="main__link">
+                                <div class="main__card">
+                                    <div class="card__body">
+                                        <div class="histogram histogram_width-100">
+                                            <div class="histogram__header">
+                                                <h3 class="histogram__title">Total orders</h3>
+                                                <p class="histogram__link">View all</p>
+                                            </div>
+                                            <h4 class="histogram__total">50254</h4>
+                                            <div class="histogram__items">
+                                                <div class="histogram__item histogram__item_high"></div>
+                                                <div class="histogram__item histogram__item_mid"></div>
+                                                <div class="histogram__item histogram__item_short"></div>
+                                                <div class="histogram__item histogram__item_mid"></div>
+                                                <div class="histogram__item histogram__item_short"></div>
+                                                <div class="histogram__item histogram__item_mid"></div>
+                                                <div class="histogram__item histogram__item_mid"></div>
+                                                <div class="histogram__item histogram__item_high"></div>
+                                                <div class="histogram__item histogram__item_low"></div>
+                                                <div class="histogram__item histogram__item_short"></div>
+                                                <div class="histogram__item histogram__item_mid"></div>
+                                                <div class="histogram__item histogram__item_mid"></div>
+                                                <div class="histogram__item histogram__item_low"></div>
+                                                <div class="histogram__item histogram__item_high"></div>
+                                                <div class="histogram__item histogram__item_low"></div>
+                                                <div class="histogram__item histogram__item_high"></div>
+                                                <div class="histogram__item histogram__item_high"></div>
+                                                <div class="histogram__item histogram__item_low"></div>
+                                                <div class="histogram__item histogram__item_high"></div>
+                                                <div class="histogram__item histogram__item_high"></div>
+                                                <div class="histogram__item histogram__item_low"></div>
+                                                <div class="histogram__item histogram__item_mid"></div>
+                                                <div class="histogram__item histogram__item_mid"></div>
+                                                <div class="histogram__item histogram__item_high"></div>
+                                                <div class="histogram__item histogram__item_mid"></div>
+                                                <div class="histogram__item histogram__item_low"></div>
+                                                <div class="histogram__item histogram__item_mid"></div>
+                                                <div class="histogram__item histogram__item_low"></div>
+                                                <div class="histogram__item histogram__item_mid"></div>
+                                                <div class="histogram__item histogram__item_short"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__footer">
+                                        <h4>Histogram</h4>
+                                        <p>Organism</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="06-lection4/01-avatar/index.html" class="main__link">
+                                <div class="main__card">
+                                    <div class="card__body">
+                                        <div class="avatar">
+                                            <img class="avatar__image" src="06-lection4/01-avatar/public/avatar-200.jpg"
+                                                alt="avatar">
+
+                                        </div>
+                                    </div>
+                                    <div class="card__footer">
+                                        <h4>Avatar</h4>
+                                        <p>Organism</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="07-lection5/01-checkbox/index.html" class="main__link">
+                                <div class="main__card">
+                                    <div class="card__body">
+                                        <div class="checkboxes">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox">
+                                                <div class="checkbox__wrapper">
+                                                <div class="checkbox__control"></div>
+                                                <span class="checkbox__title">Default</span>
+                                            </div>
+                                            </label>
+                                   
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" checked>
+                                                <div class="checkbox__wrapper">
+                                                <div class="checkbox__control"></div>
+                                                <span class="checkbox__title">Checked</span>
+                                            </div>
+                                            </label>
+                                   
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" disabled>
+                                                <div class="checkbox__wrapper">
+                                                <div class="checkbox__control"></div>
+                                                <span class="checkbox__title checkbox__title-dis">Disabled</span>
+                                            </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="card__footer"> 
+                                        <h4>Avatar</h4>
+                                        <p>Organism</p>
+                                    </div>
+                                </div>
+                                </a>
+                         
+
+                            <a href="05-lection3/03-calendar/index.html" class="main__link">
+                                <div class="main__card">
+                                    <div class="card__body">
+                                    <div class="calendar">
+                                        <h3 class="calendar__title">October 2019</h3>
+                                    <div class="calendar__numbers">
+                                        <div>Mon</div>
+                                        <div>Tue</div>
+                                        <div>Wed</div>
+                                        <div>Thu</div>
+                                        <div>Fri</div>
+                                        <div>Sat</div>
+                                        <div>Sun</div>
+                                    </div>
+                                    <div class="calendar__days">
+                                        <div class="calendar__day calendar__day_first-day">1</div>
+                                        <div class="calendar__day">2</div>
+                                        <div class="calendar__day">3</div>
+                                        <div class="calendar__day">4</div>
+                                        <div class="calendar__day">5</div>
+                                        <div class="calendar__day">6</div>
+                                        <div class="calendar__day">7</div>
+                                        <div class="calendar__day">8</div>
+                                        <div class="calendar__day">9</div>
+                                        <div class="calendar__day">10</div>
+                                        <div class="calendar__day">11</div>
+                                        <div class="calendar__day">12</div>
+                                        <div class="calendar__day">13</div>
+                                        <div class="calendar__day">14</div>
+                                        <div class="calendar__day">15</div>
+                                        <div class="calendar__day">16</div>
+                                        <div class="calendar__day">17</div>
+                                        <div class="calendar__day calendar__day_start">18</div>
+                                        <div class="calendar__day calendar__day_between">19</div>
+                                        <div class="calendar__day calendar__day_between">20</div>
+                                        <div class="calendar__day calendar__day_between">21</div>
+                                        <div class="calendar__day calendar__day_between">22</div>
+                                        <div class="calendar__day calendar__day_end">23</div>
+                                        <div class="calendar__day">24</div>
+                                        <div class="calendar__day">25</div>
+                                        <div class="calendar__day">26</div>
+                                        <div class="calendar__day">27</div>
+                                        <div class="calendar__day">28</div>
+                                        <div class="calendar__day">29</div>
+                                        <div class="calendar__day">30</div>
+                                        <div class="calendar__day">31</div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="card__footer">
+                                    <h4>Avatar</h4>
+                                    <p>Organism</p>
+                                </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="tab__content" id="headerTab2-content">
+                        <div class="main__container">
+                            <div class="main__card"><a href="05-lection3/01-tooltip/index.html">link</a></div>
+                            <div class="main__card"><a href="05-lection3/02-modal/index.html">link</a></div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab__content" id="headerTab3-content">
+                        <h1>333</h1>
+                        <div class="main__container">
+                            <div class="main__card"><a href="05-lection3/01-tooltip/index.html">link</a></div>
+                            <div class="main__card"><a href="05-lection3/02-modal/index.html">link</a></div>
+
+                        </div>
+                    </div>
+                    <div class="tab__content" id="headerTab4-content">
+                        <div class="main__container">
+                            <div class="main__card"><a href="05-lection3/01-tooltip/index.html">link</a></div>
+                            <div class="main__card"><a href="05-lection3/02-modal/index.html">link</a></div>
+                        </div>
+                    </div>
+            
+            </main>
+        </div>
+    </section>
+
+
+
+    <section class="footerBlock">
+    <footer class="footer">
+        <h2 class="footer__title">About</h2>
+        <p class="footer__text">This project is a collection of professionally designed, pre-built, fully responsive
+            HTML snippets you can drop into your projects. Get started by checking out our free preview components,
+            or browsing the PNG previews in the categories you're most curious about.</p>
+    </footer>
+</section>
+    <script src="10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script>
+        // получаем все необходимые элементы
+const tabInputs = document.querySelectorAll('.tabs__input');
+const tabContents = document.querySelectorAll('.tab__content');
+
+// добавляем обработчики на элементы управления
+tabInputs.forEach((input) => {
+  input.addEventListener('click', () => {
+    // скрываем все вкладки
+    tabContents.forEach((content) => {
+      content.classList.remove('active');
+    });
+
+    // отображаем содержимое выбранной вкладки
+    const selectedTabContent = document.querySelector(`#${input.id}-content`);
+    selectedTabContent.classList.add('active');
+  });
+});
+    </script>
+</body>
+
 </html>

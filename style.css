@@ -1,79 +1,182 @@
+body {
+  margin: 0;
+}
 
-.tabs__divider {
-    position: absolute;
-    width: 100%;
-    left: 50%;
-    margin: 0;
-    border: 0;
-    transform: translate(-50%, 0);
-    height: 1px;
-    background-color: #DDE2E5;
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.tabs__input {
+  display: none;
+}
+
+.tabs > .tabs__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px 15px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  position: relative;
+  top: 1px;
+  color: #ACB5BD;
+}
+
+.tabs > label:not(:first-of-type) {
+border-left: none;
+}
+
+.tabs > input[type="radio"]:checked+label {
+border-bottom: 5px solid var(--black);
+color: var(--black);
+}
+
+.tab__content {
+display: none;
+}
+
+.tab__content.active {
+display: block;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.headerBlock {
+  padding: 25px 0 0;
+  border-bottom: 1px solid var(--grey-2);
+}
+
+.headerBlock .tabs label {
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+.mainBlock {
+  background: var(--grey-1);
+  padding-bottom: 68px;
+  --card-number: 1;
+  --gap-number: calc(var(--card-number) - 1);
+  --gap-size: 30px;
+}
+
+.mainBlock .main {
+  background-color: transparent;
+}
+
+.mainBlock .main__container {
+  gap: var(--gap-size);
+}
+
+.mainBlock .main__link {
+  max-width: none;
+  width: calc(100% / var(--card-number) - (var(--gap-size) * var(--gap-number)) / var(--card-number) );
+  /* width: calc(100% / var(--card-number) - 20px); */
+  /* 100% /3 - 60px / 3 */
+  
+  box-sizing: border-box;
+}
+
+.mainBlock .main__card  {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 30px;
+  height: 100%;
+}
+.mainBlock .main__card .card__body {
+  min-height: 200px;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainBlock .main__card .card__footer {
+  text-align: center;
 }
 
 
 .header__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
 
 .header__icons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
 }
 
-.header__logo {
-    margin-top: 10px;
+.main__link:link {
+ color: var(----black);
+text-decoration: none;
 }
 
-.tabs {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    position: relative;
+.main__link:visited {
+  color: var(----black);
+  text-decoration: none;
+}
 
-  }
+.main__link:hover {
+  color: var(----black);
+  text-decoration: none;
+}
 
-.tabs__input {
-    display: none;
-  }
+.main__link:active {
+  color: var(----black);
+  text-decoration: none;
+}
 
-  .tabs > div {
-    /* скрыть контент по умолчанию */
-    display: none;
-  }
+.histogram_width-100 {
+  width: 100%;
+}
 
 
-  /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
-    .tabs__input-1:checked~.container__content-1,
-    .tabs__input-2:checked~.content-2,
-    .tabs__input-3:checked~.content-3,
-    .tabs__input-4:checked~.content-4 {
-    display: block;
+/* Vertical Tablet */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
     }
 
+  .mainBlock {
+    --card-number: 2;
+  }
+}
 
-  .tabs>label {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    padding: 5px 15px;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-    position: relative;
-    top: 1px;
-    color: #ACB5BD;
+
+/* Horizontal Tablet */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
   }
 
-  .tabs>label:not(:first-of-type) {
-    border-left: none;
+  .mainBlock {
+    --card-number: 3;
   }
+}
 
-  .tabs>input[type="radio"]:checked+label {
-    border-bottom: 5px solid black;
-    color: black;
+/* Small PC */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
   }
+}
+
+.footerBlock {
+  padding: 25px;
+}
