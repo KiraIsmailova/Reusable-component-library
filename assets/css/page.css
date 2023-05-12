@@ -1,0 +1,44 @@
+.page_inner { 
+    background-color: var(--grey-1);
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 30% 1fr 10%;
+    height: 100vh;
+    margin: 0;
+    gap: 36px;
+}
+
+.page__header {
+    grid-area: header;
+    background-color: var(--white);
+}
+
+.page__main {
+    grid-area: article; 
+    max-width: 780px;
+    background-color: var(--white);
+}
+
+.page__burger {
+    grid-area: nav; 
+}
+
+.page__siteAds {
+    grid-area: ads; 
+    background: var(--grey-1);
+}
+
+.page__footer {
+grid-area: footer;
+background: var(--grey-1);
+}
+
+.footer__text {
+    text-transform: uppercase;
+}
+
+
