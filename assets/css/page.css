@@ -21,6 +21,9 @@
     grid-area: article; 
     max-width: 780px;
     background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .page__burger {
@@ -41,4 +44,7 @@ background: var(--grey-1);
     text-transform: uppercase;
 }
 
+.histogram__items-template {
+    width: 100%;
+}
 
