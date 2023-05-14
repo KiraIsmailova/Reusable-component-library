@@ -44,6 +44,7 @@
     flex-basis: 9px;
     margin-right: 1px;
     background-color: var(--purple-light);
+    animation: appear 0.6s ease-out;
 }
 
 .histogram__item_high {
