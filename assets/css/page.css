@@ -1,50 +1,92 @@
-.page_inner { 
-    background-color: var(--grey-1);
-    display: grid;
-    grid-template-areas: 
-    "header header header"
-    "nav article ads"
-    "footer footer footer";
+.page_inner {
+  background-color: var(--grey-1);
+  display: grid;
+  grid-template-areas:
+      "header header header"
+      "article article article"
+      "footer footer footer";
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 30% 1fr 10%;
-    height: 100vh;
-    margin: 0;
-    gap: 36px;
+    grid-template-columns: 10% 80% 10%;
+  margin: 0;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .page__header {
-    grid-area: header;
-    background-color: var(--white);
+  grid-area: header;
+  background: var(--grey-1);
+  padding: 30px 0;
 }
 
 .page__main {
-    grid-area: article; 
-    max-width: 780px;
-    background-color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-area: article;
+  background-color: var(--white);
+  padding: 2rem 3rem;
 }
 
 .page__burger {
-    grid-area: nav; 
+  grid-area: nav;
+}
+
+.nav_section {
+  display: none;
 }
 
 .page__siteAds {
-    grid-area: ads; 
-    background: var(--grey-1);
+  grid-area: ads;
+  background: var(--grey-1);
 }
 
 .page__footer {
-grid-area: footer;
-background: var(--grey-1);
+  grid-area: footer;
+  background: var(--grey-1);
+  padding: 30px;
 }
 
 .footer__text {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
-.histogram__items-template {
-    width: 100%;
+.template__header {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38px;
 }
 
+.tab__code {
+  padding: 48px 3rem;
+  font-size: 1rem;
+}
+
+.burger__btn-template {
+  position: sticky;
+  left: 28px;
+  top: 28px;
+}
+
+.allcomponents_template {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  gap: 2rem;
+}
+
+
+@media (min-width: 992px) {
+  .nav_section {
+    display: block;
+  }
+
+  .page_inner {
+    grid-template-areas:
+      "header header ads"
+      "nav article ads"
+      "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 25% 68% 7%;
+  }
+}

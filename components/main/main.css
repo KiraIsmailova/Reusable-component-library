@@ -1,5 +1,5 @@
 .main { 
-    background: var(--white-2);
+    background: var(--white);
 }
 
 .main__container {
@@ -11,9 +11,16 @@
 }
 
 .main__card {
-    max-width: 350px;
+    max-width: 100%;
     min-height: 367px;
     background-color: var(--white);
     box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
     border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+    .main__card {
+        max-width: 350px;
+    }
+    
 }

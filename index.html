@@ -5,30 +5,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/css/myOwnNormalize.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="style.css">
     <title>HTML/CSS project</title>
 </head>
 
-<body class="page" data-info="Data from body">
+<body>
+    <div class="burger-wrapper">
+        <input class="burger__toggle" id="burger__toggle" type="checkbox" />
+    
+        <div class="burger" id="burger-menu">
+          <div class="burger__header">
+            <label class="burger__btn burger-menu-close" for="burger__toggle" id="burger-menu-close">
+              <span class="burger__control"></span>
+            </label>
+    
+            <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_18829_459)">
+                <rect y="1" width="30" height="30" fill="#212429" />
+                <rect x="38" width="32" height="32" rx="16" fill="#212429" />
+                <path d="M78 0L110 32H78V0Z" fill="#212429" />
+              </g>
+              <defs>
+                <clipPath id="clip0_18829_459">
+                  <rect width="110" height="32" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+    
+          <div class="burger__box">
+            <hr class="burger__hr">
+            <div class="burger__mode">
+              <p class="burger__title">Dark mode</p>
+              <label class="burger__checkbox">
+                <input class="burger__input" type="checkbox">
+                <span class="burger__state"></span>
+                <span class="burger__text">Off</span>
+              </label>
+            </div>
+            <hr class="burger__hr">
+            <div>
+              <h4 class="burger__title burger__title_list">Components</h4>
+              <ul class="burger__list">
+                <li><a class="burger__item" href="#">Modal</a></li>
+                <li><a class="burger__item" href="#">Tooltip</a></li>
+                <li><a class="burger__item" href="#">Avatar</a></li>
+                <li><a class="burger__item" href="#">Calendar</a></li>
+                <li><a class="burger__item" href="#">Histogram</a></li>
+                <li><a class="burger__item" href="#">Custom form elements</a></li>
+                <li><a class="burger__item burger__item_home-link" href="#">Main page</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <section class="headerBlock" data-some="Hello Kira">
+    <header class="header header_styles">
         <div class="container">
-            <header class="header">
+            <section class="header__block">
                 <div class="header__wrapper">
+                    <label class="burger__btn burger__btn_left" for="burger__toggle" id="burger-menu-open">
+                        <span class="burger__control"></span>
+                      </label>
                     <div class="header__logo">
-                        <svg class="burger__icon" width="110" height="32" viewBox="0 0 110 32" fill="none"
+                        <svg width="110" height="32" viewBox="0 0 110 32" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_18829_459)">
+                            <g>
                                 <rect y="1" width="30" height="30" fill="var(--black)" />
+
                                 <rect x="38" width="32" height="32" rx="16" fill="var(--black)" />
-                                <path d="M78 0L110 32H78V0Z" fill="var(--black)"/>
+                                <path d="M78 0L110 32H78V0Z" fill="var(--black)" />
                             </g>
-                            <defs>
-                                <clipPath id="clip0_18829_459">
-                                    <rect width="110" height="32" fill="var(--white)" />
-                                </clipPath>
-                            </defs>
                         </svg>
                     </div>
                     <div class="header__icons">
@@ -84,7 +133,7 @@
                 </div>
                 <h1 class="header__title header__title-mar">Reusable component library</h1>
                 <!-- <h1 class="header__title header__title-mar">Поток - верхние элмементы толкают вниз нижестоящие элементы</h1> -->
-                
+
                 <div class="tabs">
                     <input class="tabs__input tabs__input-1" type="radio" name="tab-btn" id="headerTab1" checked>
                     <label class="tabs__label" for="headerTab1">All components</label>
@@ -95,298 +144,734 @@
                     <input class="tabs__input tabs__input-4" type="radio" name="tab-btn" id="headerTab4">
                     <label class="tabs__label" for="headerTab4">Organisms</label>
                 </div>
-            </header>
+            </section>
         </div>
-    </section>
+    </header>
+
+
+
 
     <section class="mainBlock">
         <div class="container">
             <main class="main">
-             
-                    <!-- <hr class="tabs__divider"> -->
-                    <div class="tab__content active" id="headerTab1-content">
-                        <div class="main__container">
-                            
-                            <a href="pages/TooltipTemplate.html" class="main__link">
-                                <div class="main__card">
-                                    <div class="card__body">
-                                        <div class="tooltip">
-                                            <div class="tooltip__trigger">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"
-                                                        fill="#212429" />
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M12.2581 8.02432C11.7926 7.94447 11.3138 8.03195 10.9066 8.27126C10.4994 8.51058 10.1901 8.88629 10.0333 9.33184C9.85006 9.85283 9.27914 10.1266 8.75815 9.94333C8.23716 9.76006 7.96339 9.18915 8.14666 8.66816C8.46013 7.77705 9.07886 7.02563 9.89327 6.547C10.7077 6.06837 11.6652 5.89341 12.5962 6.05311C13.5273 6.2128 14.3717 6.69686 14.9801 7.41953C15.5883 8.14205 15.9213 9.05648 15.92 10.0009C15.9195 11.5313 14.7849 12.5419 13.9747 13.082C13.5391 13.3725 13.1105 13.586 12.7949 13.7263C12.6356 13.7971 12.5015 13.8508 12.4049 13.8876C12.3565 13.906 12.3173 13.9203 12.2887 13.9305L12.254 13.9427L12.2429 13.9464L12.239 13.9478L12.2375 13.9483C12.2372 13.9484 12.2362 13.9487 11.92 13L12.2362 13.9487C11.7123 14.1233 11.146 13.8402 10.9713 13.3162C10.7968 12.7926 11.0794 12.2267 11.6027 12.0517L11.6014 12.0521C11.6015 12.0521 11.6016 12.052 11.6027 12.0517L11.6187 12.0461C11.6341 12.0406 11.6593 12.0314 11.6929 12.0186C11.7603 11.9929 11.8606 11.9529 11.9826 11.8987C12.2294 11.789 12.5509 11.6275 12.8653 11.4179C13.5549 10.9582 13.92 10.4691 13.92 10L13.92 9.99851C13.9207 9.52619 13.7542 9.06886 13.45 8.70753C13.1459 8.34619 12.7236 8.10417 12.2581 8.02432Z"
-                                                        fill="#212429" />
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M12 15C12.5523 15 13 15.4477 13 16V16.5C13 17.0523 12.5523 17.5 12 17.5C11.4477 17.5 11 17.0523 11 16.5V16C11 15.4477 11.4477 15 12 15Z"
-                                                        fill="#212429" />
-                                                </svg>
-                                            </div>
-                                            <div class="tooltip__bubble">Helper Text</div>
-
+                <div class="tab__content tab__content_no-border active" id="headerTab1-content">
+                    <div class="main__container main__container_fonts">
+                        <a href="pages/TooltipTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    <div class="tooltip">
+                                        <div class="tooltip__trigger">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"
+                                                    style="fill: var(--black)" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12.2581 8.02432C11.7926 7.94447 11.3138 8.03195 10.9066 8.27126C10.4994 8.51058 10.1901 8.88629 10.0333 9.33184C9.85006 9.85283 9.27914 10.1266 8.75815 9.94333C8.23716 9.76006 7.96339 9.18915 8.14666 8.66816C8.46013 7.77705 9.07886 7.02563 9.89327 6.547C10.7077 6.06837 11.6652 5.89341 12.5962 6.05311C13.5273 6.2128 14.3717 6.69686 14.9801 7.41953C15.5883 8.14205 15.9213 9.05648 15.92 10.0009C15.9195 11.5313 14.7849 12.5419 13.9747 13.082C13.5391 13.3725 13.1105 13.586 12.7949 13.7263C12.6356 13.7971 12.5015 13.8508 12.4049 13.8876C12.3565 13.906 12.3173 13.9203 12.2887 13.9305L12.254 13.9427L12.2429 13.9464L12.239 13.9478L12.2375 13.9483C12.2372 13.9484 12.2362 13.9487 11.92 13L12.2362 13.9487C11.7123 14.1233 11.146 13.8402 10.9713 13.3162C10.7968 12.7926 11.0794 12.2267 11.6027 12.0517L11.6014 12.0521C11.6015 12.0521 11.6016 12.052 11.6027 12.0517L11.6187 12.0461C11.6341 12.0406 11.6593 12.0314 11.6929 12.0186C11.7603 11.9929 11.8606 11.9529 11.9826 11.8987C12.2294 11.789 12.5509 11.6275 12.8653 11.4179C13.5549 10.9582 13.92 10.4691 13.92 10L13.92 9.99851C13.9207 9.52619 13.7542 9.06886 13.45 8.70753C13.1459 8.34619 12.7236 8.10417 12.2581 8.02432Z"
+                                                    style="fill: var(--black)" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12 15C12.5523 15 13 15.4477 13 16V16.5C13 17.0523 12.5523 17.5 12 17.5C11.4477 17.5 11 17.0523 11 16.5V16C11 15.4477 11.4477 15 12 15Z"
+                                                    style="fill: var(--black)" />
+                                            </svg>
                                         </div>
-                                    </div>
-                                    <div class="card__footer">
-                                        <h4>Tooltip</h4>
-                                        <p>Atom</p>
+                                        <div class="tooltip__bubble" style="display: block;">Helper Text</div>
+
                                     </div>
                                 </div>
-                            </a>
-                            
-                            <a href="pages/ModalTemplate.html" class="main__link">
-                                <div class="main__card">
-                                    <div class="card__body">
-                                        <div class="modal" id="modal">
-                                            <div class="modal__container">
-                                                <svg class="modal__cross" id="modal-close" width="16" height="16"
-                                                    viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M12.4714 3.52861C12.7318 3.78896 12.7318 4.21107 12.4714 4.47141L4.47141 12.4714C4.21107 12.7318 3.78896 12.7318 3.52861 12.4714C3.26826 12.2111 3.26826 11.789 3.52861 11.5286L11.5286 3.52861C11.789 3.26826 12.2111 3.26826 12.4714 3.52861Z"
-                                                        fill="#495057" />
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M3.52861 3.52861C3.78896 3.26826 4.21107 3.26826 4.47141 3.52861L12.4714 11.5286C12.7318 11.789 12.7318 12.2111 12.4714 12.4714C12.2111 12.7318 11.789 12.7318 11.5286 12.4714L3.52861 4.47141C3.26826 4.21107 3.26826 3.78896 3.52861 3.52861Z"
-                                                        fill="#495057" />
-                                                </svg>
-                                                <h2 class="modal__title">Modal title</h2>
-                                                <p class="modal__text">Amet minim mollit non deserunt ullamco est sit
-                                                    aliqua
-                                                    dolor do amet sint. Velit officia consequat duis enim velit mollit.
-                                                    Exercitation veniam consequat sunt nostrud amet.
-                                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                                                    sint. Velit officia consequat duis enim velit mollit. Exercitation
-                                                    veniam consequat sunt nostrud amet.</p>
-                                            </div>
-                                        </div>
-                                        <button class="button button_primary" id="modal-open">Open modal</button>
-                                    </div>
-                                    <div class="card__footer">
-                                        <h4>Modal</h4>
-                                        <p>Organism</p>
-                                    </div>
-                                </div>
-                            </a>
-                            
-                            <a href="pages/HistogramTemplate.html" class="main__link">
-                                <div class="main__card">
-                                    <div class="card__body">
-                                        <div class="histogram histogram_width-100">
-                                            <div class="histogram__header">
-                                                <h3 class="histogram__title">Total orders</h3>
-                                                <p class="histogram__link">View all</p>
-                                            </div>
-                                            <h4 class="histogram__total">50254</h4>
-                                            <div class="histogram__items">
-                                                <div class="histogram__item histogram__item_high"></div>
-                                                <div class="histogram__item histogram__item_mid"></div>
-                                                <div class="histogram__item histogram__item_short"></div>
-                                                <div class="histogram__item histogram__item_mid"></div>
-                                                <div class="histogram__item histogram__item_short"></div>
-                                                <div class="histogram__item histogram__item_mid"></div>
-                                                <div class="histogram__item histogram__item_mid"></div>
-                                                <div class="histogram__item histogram__item_high"></div>
-                                                <div class="histogram__item histogram__item_low"></div>
-                                                <div class="histogram__item histogram__item_short"></div>
-                                                <div class="histogram__item histogram__item_mid"></div>
-                                                <div class="histogram__item histogram__item_mid"></div>
-                                                <div class="histogram__item histogram__item_low"></div>
-                                                <div class="histogram__item histogram__item_high"></div>
-                                                <div class="histogram__item histogram__item_low"></div>
-                                                <div class="histogram__item histogram__item_high"></div>
-                                                <div class="histogram__item histogram__item_high"></div>
-                                                <div class="histogram__item histogram__item_low"></div>
-                                                <div class="histogram__item histogram__item_high"></div>
-                                                <div class="histogram__item histogram__item_high"></div>
-                                                <div class="histogram__item histogram__item_low"></div>
-                                                <div class="histogram__item histogram__item_mid"></div>
-                                                <div class="histogram__item histogram__item_mid"></div>
-                                                <div class="histogram__item histogram__item_high"></div>
-                                                <div class="histogram__item histogram__item_mid"></div>
-                                                <div class="histogram__item histogram__item_low"></div>
-                                                <div class="histogram__item histogram__item_mid"></div>
-                                                <div class="histogram__item histogram__item_low"></div>
-                                                <div class="histogram__item histogram__item_mid"></div>
-                                                <div class="histogram__item histogram__item_short"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card__footer">
-                                        <h4>Histogram</h4>
-                                        <p>Organism</p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="06-lection4/01-avatar/index.html" class="main__link">
-                                <div class="main__card">
-                                    <div class="card__body">
-                                        <div class="avatar">
-                                            <img class="avatar__image" src="06-lection4/01-avatar/public/avatar-200.jpg"
-                                                alt="avatar">
-
-                                        </div>
-                                    </div>
-                                    <div class="card__footer">
-                                        <h4>Avatar</h4>
-                                        <p>Organism</p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="07-lection5/01-checkbox/index.html" class="main__link">
-                                <div class="main__card">
-                                    <div class="card__body">
-                                        <div class="checkboxes">
-                                            <label class="checkbox">
-                                                <input class="checkbox__input" type="checkbox">
-                                                <div class="checkbox__wrapper">
-                                                <div class="checkbox__control"></div>
-                                                <span class="checkbox__title">Default</span>
-                                            </div>
-                                            </label>
-                                   
-                                            <label class="checkbox">
-                                                <input class="checkbox__input" type="checkbox" checked>
-                                                <div class="checkbox__wrapper">
-                                                <div class="checkbox__control"></div>
-                                                <span class="checkbox__title">Checked</span>
-                                            </div>
-                                            </label>
-                                   
-                                            <label class="checkbox">
-                                                <input class="checkbox__input" type="checkbox" disabled>
-                                                <div class="checkbox__wrapper">
-                                                <div class="checkbox__control"></div>
-                                                <span class="checkbox__title checkbox__title-dis">Disabled</span>
-                                            </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="card__footer"> 
-                                        <h4>Avatar</h4>
-                                        <p>Organism</p>
-                                    </div>
-                                </div>
-                                </a>
-                         
-
-                            <a href="05-lection3/03-calendar/index.html" class="main__link">
-                                <div class="main__card">
-                                    <div class="card__body">
-                                    <div class="calendar">
-                                        <h3 class="calendar__title">October 2019</h3>
-                                    <div class="calendar__numbers">
-                                        <div>Mon</div>
-                                        <div>Tue</div>
-                                        <div>Wed</div>
-                                        <div>Thu</div>
-                                        <div>Fri</div>
-                                        <div>Sat</div>
-                                        <div>Sun</div>
-                                    </div>
-                                    <div class="calendar__days">
-                                        <div class="calendar__day calendar__day_first-day">1</div>
-                                        <div class="calendar__day">2</div>
-                                        <div class="calendar__day">3</div>
-                                        <div class="calendar__day">4</div>
-                                        <div class="calendar__day">5</div>
-                                        <div class="calendar__day">6</div>
-                                        <div class="calendar__day">7</div>
-                                        <div class="calendar__day">8</div>
-                                        <div class="calendar__day">9</div>
-                                        <div class="calendar__day">10</div>
-                                        <div class="calendar__day">11</div>
-                                        <div class="calendar__day">12</div>
-                                        <div class="calendar__day">13</div>
-                                        <div class="calendar__day">14</div>
-                                        <div class="calendar__day">15</div>
-                                        <div class="calendar__day">16</div>
-                                        <div class="calendar__day">17</div>
-                                        <div class="calendar__day calendar__day_start">18</div>
-                                        <div class="calendar__day calendar__day_between">19</div>
-                                        <div class="calendar__day calendar__day_between">20</div>
-                                        <div class="calendar__day calendar__day_between">21</div>
-                                        <div class="calendar__day calendar__day_between">22</div>
-                                        <div class="calendar__day calendar__day_end">23</div>
-                                        <div class="calendar__day">24</div>
-                                        <div class="calendar__day">25</div>
-                                        <div class="calendar__day">26</div>
-                                        <div class="calendar__day">27</div>
-                                        <div class="calendar__day">28</div>
-                                        <div class="calendar__day">29</div>
-                                        <div class="calendar__day">30</div>
-                                        <div class="calendar__day">31</div>
-                                    </div>
+                                <div class="card__footer">
+                                    <h4 class="card__header">Tooltip</h4>
+                                    <p class="card__text">Atom</p>
                                 </div>
                             </div>
+                        </a>
+
+                        <a href="pages/ModalTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    
+                                    <button class="button button_primary">Open modal</button>
+                                </div>
                                 <div class="card__footer">
-                                    <h4>Avatar</h4>
-                                    <p>Organism</p>
+                                    <h4 class="card__header">Modal</h4>
+                                    <p class="card__text">Organism</p>
                                 </div>
+                            </div>
+                        </a>
+
+                        <a href="pages/HistogramTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    <div class="histogram histogram_width-100">
+                                        <div class="histogram__header">
+                                            <h3 class="histogram__title">Total orders</h3>
+                                            <p class="histogram__link">View all</p>
+                                        </div>
+                                        <h4 class="histogram__total">50254</h4>
+                                        <div class="histogram__items">
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_short"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_short"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_short"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_short"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
+                                <div class="card__footer">
+                                    <h4 class="card__header">Histogram</h4>
+                                    <p class="card__text">Organism</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="pages/AvatarTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    <div class="avatar">
+                                        <img class="avatar__image" src="06-lection4/01-avatar/public/avatar-200.jpg"
+                                            alt="avatar">
+
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <h4 class="card__header">Avatar</h4>
+                                    <p class="card__text">Organism</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="pages/ButtonsTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    <div class="flex-container">
+                                        <div class="top-row">
+                                      
+                                            <label class="checkbox checkbox_one">
+                                                <input class="checkbox__input" type="checkbox">
+                                                <div class="checkbox__wrapper">
+                                                    <div class="checkbox__control"></div>
+                                                    <span class="checkbox__title"
+                                                        style="margin-right: 6px;">Default</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="checkbox checkbox_two">
+                                                <input class="checkbox__input" type="checkbox" checked>
+                                                <div class="checkbox__wrapper">
+                                                    <div class="checkbox__control"></div>
+                                                    <span class="checkbox__title">Checked</span>
+                                                </div>
+                                            </label>
+                                            </div>
+
+                                            <div class="bottom-row">
+
+                                            <label class="radio radio_one">
+                                                <input class="radio__input" type="radio" name="sampleRadio"
+                                                    value="option1">
+                                                <div class="radio__wrapper">
+                                                    <div class="radio__state" style="margin-left: 15px;"></div>
+                                                    <div class="radio__title">Default</div>
+                                                </div>
+                                            </label>
+                                       
+                                           
+                                            <label class="radio radio_two">
+                                                <input class="radio__input" type="radio" name="sampleRadio"
+                                                    value="option3" id="t2" checked>
+                                                <div class="radio__wrapper">
+                                                    <div class="radio__state" style="margin-left: 25px;"></div>
+                                                    <div class="radio__title" style="margin-left: 5px;">Checked</div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                                <div class="card__footer">
+                                    <h4 class="card__header">Custom form elements</h4>
+                                    <p class="card__text">Molecules</p>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a href="pages/CalendarTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    <div class="calendar">
+                                        <h3 class="calendar__title">October 2019</h3>
+                                        <div class="calendar__numbers">
+                                            <div>Mon</div>
+                                            <div>Tue</div>
+                                            <div>Wed</div>
+                                            <div>Thu</div>
+                                            <div>Fri</div>
+                                            <div>Sat</div>
+                                            <div>Sun</div>
+                                        </div>
+                                        <div class="calendar__days">
+                                            <div class="calendar__day calendar__day_first-day">1</div>
+                                            <div class="calendar__day">2</div>
+                                            <div class="calendar__day">3</div>
+                                            <div class="calendar__day">4</div>
+                                            <div class="calendar__day">5</div>
+                                            <div class="calendar__day">6</div>
+                                            <div class="calendar__day">7</div>
+                                            <div class="calendar__day">8</div>
+                                            <div class="calendar__day">9</div>
+                                            <div class="calendar__day">10</div>
+                                            <div class="calendar__day">11</div>
+                                            <div class="calendar__day">12</div>
+                                            <div class="calendar__day">13</div>
+                                            <div class="calendar__day">14</div>
+                                            <div class="calendar__day">15</div>
+                                            <div class="calendar__day">16</div>
+                                            <div class="calendar__day">17</div>
+                                            <div class="calendar__day calendar__day_start">18</div>
+                                            <div class="calendar__day calendar__day_between">19</div>
+                                            <div class="calendar__day calendar__day_between">20</div>
+                                            <div class="calendar__day calendar__day_between">21</div>
+                                            <div class="calendar__day calendar__day_between">22</div>
+                                            <div class="calendar__day calendar__day_end">23</div>
+                                            <div class="calendar__day">24</div>
+                                            <div class="calendar__day">25</div>
+                                            <div class="calendar__day">26</div>
+                                            <div class="calendar__day">27</div>
+                                            <div class="calendar__day">28</div>
+                                            <div class="calendar__day">29</div>
+                                            <div class="calendar__day">30</div>
+                                            <div class="calendar__day">31</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <h4 class="card__header">Calendar</h4>
+                                    <p class="card__text">Molecule</p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="tab__content" id="headerTab2-content">
+                    <div class="main__container" style="margin-bottom: 2rem">
+                        <a href="pages/TooltipTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    <div class="tooltip">
+                                        <div class="tooltip__trigger">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"
+                                                    style="fill: var(--black)" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12.2581 8.02432C11.7926 7.94447 11.3138 8.03195 10.9066 8.27126C10.4994 8.51058 10.1901 8.88629 10.0333 9.33184C9.85006 9.85283 9.27914 10.1266 8.75815 9.94333C8.23716 9.76006 7.96339 9.18915 8.14666 8.66816C8.46013 7.77705 9.07886 7.02563 9.89327 6.547C10.7077 6.06837 11.6652 5.89341 12.5962 6.05311C13.5273 6.2128 14.3717 6.69686 14.9801 7.41953C15.5883 8.14205 15.9213 9.05648 15.92 10.0009C15.9195 11.5313 14.7849 12.5419 13.9747 13.082C13.5391 13.3725 13.1105 13.586 12.7949 13.7263C12.6356 13.7971 12.5015 13.8508 12.4049 13.8876C12.3565 13.906 12.3173 13.9203 12.2887 13.9305L12.254 13.9427L12.2429 13.9464L12.239 13.9478L12.2375 13.9483C12.2372 13.9484 12.2362 13.9487 11.92 13L12.2362 13.9487C11.7123 14.1233 11.146 13.8402 10.9713 13.3162C10.7968 12.7926 11.0794 12.2267 11.6027 12.0517L11.6014 12.0521C11.6015 12.0521 11.6016 12.052 11.6027 12.0517L11.6187 12.0461C11.6341 12.0406 11.6593 12.0314 11.6929 12.0186C11.7603 11.9929 11.8606 11.9529 11.9826 11.8987C12.2294 11.789 12.5509 11.6275 12.8653 11.4179C13.5549 10.9582 13.92 10.4691 13.92 10L13.92 9.99851C13.9207 9.52619 13.7542 9.06886 13.45 8.70753C13.1459 8.34619 12.7236 8.10417 12.2581 8.02432Z"
+                                                    style="fill: var(--black)" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12 15C12.5523 15 13 15.4477 13 16V16.5C13 17.0523 12.5523 17.5 12 17.5C11.4477 17.5 11 17.0523 11 16.5V16C11 15.4477 11.4477 15 12 15Z"
+                                                    style="fill: var(--black)" />
+                                            </svg>
+                                        </div>
+                                        <div class="tooltip__bubble" style="display: block;">Helper Text</div>
+
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <h4 class="card__header">Tooltip</h4>
+                                    <p class="card__text">Atom</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="pages/AvatarTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    <div class="avatar">
+                                        <img class="avatar__image" src="06-lection4/01-avatar/public/avatar-200.jpg"
+                                            alt="avatar">
+
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <h4 class="card__header">Avatar</h4>
+                                    <p class="card__text">Organism</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="buttons" style="margin-bottom: 2rem">
+                        <h2 class="buttons__title">Buttons</h2>
+                        <div class="buttons__block">
+                            <button type="button" class="button button_alternate"
+                                style="border-color: var(--grey-1); background-color: var(--grey-1); width: 269px;">Button</button>
+                                <button type="button" class="button button_alternate" disabled
+                                style="border-color: var(--grey-1); background-color: var(--grey-1); width: 269px;">Button
+                                disabled</button>
+                            <button type="button" class="button button_primary button_adapt">Primary</button>
+                            <button type="button" class="button button_primary button_adapt" disabled>Primary</button>
+                            <button type="button" class="button button_secondary button_adapt">Secondary</button>
+                            <button type="button" class="button button_secondary button_adapt" disabled>Secondary</button>
+                            <button type="button" class="button button_alternate button_adapt">Alternate</button>
+                            <button type="button" class="button button_alternate button_adapt" disabled>Alternate</button>
 
                         </div>
                     </div>
 
-                    <div class="tab__content" id="headerTab2-content">
-                        <div class="main__container">
-                            <div class="main__card"><a href="05-lection3/01-tooltip/index.html">link</a></div>
-                            <div class="main__card"><a href="05-lection3/02-modal/index.html">link</a></div>
+                    <div class="customs">
+                        <h2 class="customs__title">Custom form element</h2>
+                        <div class="allcomponents">
+                        <div class="checkboxes">
+
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <div class="checkbox__wrapper">
+                                    <div class="checkbox__control"></div>
+                                    <span class="checkbox__title">Default</span>
+                                </div>
+                            </label>
+
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox" checked>
+                                <div class="checkbox__wrapper">
+                                    <div class="checkbox__control"></div>
+                                    <span class="checkbox__title">Checked</span>
+                                </div>
+                            </label>
+
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox" disabled>
+                                <div class="checkbox__wrapper">
+                                    <div class="checkbox__control"></div>
+                                    <span class="checkbox__title checkbox__title-dis">Disabled</span>
+                                </div>
+                            </label>
+
+
+                        </div>
+
+                        <div class="radios">
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="example" value="option1">
+                                <div class="radio__wrapper">
+                                    <div class="radio__state"></div>
+                                    <div class="radio__title">Default</div>
+                                </div>
+
+                            </label>
+
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="example" value="option2" checked>
+                                <div class="radio__wrapper">
+                                    <div class="radio__state"></div>
+                                    <div class="radio__title">Checked</div>
+                                </div>
+                            </label>
+
+
+
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="example" value="option3" disabled>
+                                <div class="radio__wrapper">
+                                    <div class="radio__state"></div>
+                                    <div class="radio__title">Disabled</div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="togglers">
+                            <label class="toggler">
+                                <input class="toggler__input" type="checkbox">
+                                <span class="toggler__state"></span>
+                                <span class="toggler__text">Off</span>
+                            </label>
+
+
+
+                            <label class="toggler">
+                                <input class="toggler__input" type="checkbox" checked>
+                                <span class="toggler__state"></span>
+                                <span class="toggler__text">On</span>
+                            </label>
+
+
+
+                            <label class="toggler">
+                                <input class="toggler__input" type="checkbox" disabled>
+                                <span class="toggler__state"></span>
+                                <span class="toggler__text">Disabled</span>
+                            </label>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+
+                <div class="tab__content" id="headerTab3-content">
+
+                    <div class="main__container" style="margin-bottom: 2rem;">
+                        <a href="pages/ButtonsTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    <div class="flex-container">
+                                        <div class="top-row">
+                                      
+                                            <label class="checkbox checkbox_one">
+                                                <input class="checkbox__input" type="checkbox">
+                                                <div class="checkbox__wrapper">
+                                                    <div class="checkbox__control"></div>
+                                                    <span class="checkbox__title"
+                                                        style="margin-right: 6px;">Default</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="checkbox checkbox_two">
+                                                <input class="checkbox__input" type="checkbox" checked>
+                                                <div class="checkbox__wrapper">
+                                                    <div class="checkbox__control"></div>
+                                                    <span class="checkbox__title">Checked</span>
+                                                </div>
+                                            </label>
+                                            </div>
+
+                                            <div class="bottom-row">
+
+                                            <label class="radio radio_one">
+                                                <input class="radio__input" type="radio" name="sampleRadioTwo"
+                                                    value="option1">
+                                                <div class="radio__wrapper">
+                                                    <div class="radio__state" style="margin-left: 15px;"></div>
+                                                    <div class="radio__title">Default</div>
+                                                </div>
+                                            </label>
+                                       
+                                           
+                                            <label class="radio radio_two">
+                                                <input class="radio__input" type="radio" name="sampleRadioTwo"
+                                                    value="option3" id="t2" checked>
+                                                <div class="radio__wrapper">
+                                                    <div class="radio__state" style="margin-left: 25px;"></div>
+                                                    <div class="radio__title" style="margin-left: 5px;">Checked</div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <h4 class="card__header">Custom form elements</h4>
+                                    <p class="card__text">Molecules</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="pages/CalendarTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    <div class="calendar">
+                                        <h3 class="calendar__title">October 2019</h3>
+                                        <div class="calendar__numbers">
+                                            <div>Mon</div>
+                                            <div>Tue</div>
+                                            <div>Wed</div>
+                                            <div>Thu</div>
+                                            <div>Fri</div>
+                                            <div>Sat</div>
+                                            <div>Sun</div>
+                                        </div>
+                                        <div class="calendar__days">
+                                            <div class="calendar__day calendar__day_first-day">1</div>
+                                            <div class="calendar__day">2</div>
+                                            <div class="calendar__day">3</div>
+                                            <div class="calendar__day">4</div>
+                                            <div class="calendar__day">5</div>
+                                            <div class="calendar__day">6</div>
+                                            <div class="calendar__day">7</div>
+                                            <div class="calendar__day">8</div>
+                                            <div class="calendar__day">9</div>
+                                            <div class="calendar__day">10</div>
+                                            <div class="calendar__day">11</div>
+                                            <div class="calendar__day">12</div>
+                                            <div class="calendar__day">13</div>
+                                            <div class="calendar__day">14</div>
+                                            <div class="calendar__day">15</div>
+                                            <div class="calendar__day">16</div>
+                                            <div class="calendar__day">17</div>
+                                            <div class="calendar__day calendar__day_start">18</div>
+                                            <div class="calendar__day calendar__day_between">19</div>
+                                            <div class="calendar__day calendar__day_between">20</div>
+                                            <div class="calendar__day calendar__day_between">21</div>
+                                            <div class="calendar__day calendar__day_between">22</div>
+                                            <div class="calendar__day calendar__day_end">23</div>
+                                            <div class="calendar__day">24</div>
+                                            <div class="calendar__day">25</div>
+                                            <div class="calendar__day">26</div>
+                                            <div class="calendar__day">27</div>
+                                            <div class="calendar__day">28</div>
+                                            <div class="calendar__day">29</div>
+                                            <div class="calendar__day">30</div>
+                                            <div class="calendar__day">31</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <h4 class="card__header">Calendar</h4>
+                                    <p class="card__text">Molecule</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <h2 class="skeleton__title_main">SKELETON</h2>
+
+                    <div class="skeleton" style="margin-bottom: 2rem;">
+                        <div class="skeleton__header">
+                            <div class="skeleton__circle"></div>
+                            <div class="skeleton__title">
+                                <div class="skeleton__line skeleton__line_name"></div>
+                                <div class="skeleton__line skeleton__line_date"></div>
+
+                            </div>
+                        </div>
+                        <div class="skeleton__body">
+                            <div class="skeleton__line"></div>
+                            <div class="skeleton__line"></div>
+                        </div>
+                    </div>
+
+                    <h2 class="customs__title">CUSTOM FORM ELEMENTS</h2>
+                    <div class="customs__wrapper">
+                    <div class="input input_flex">
+                        <label for="default" class="input__label">Label</label>
+                        <div class="input__state">
+                            <input class="input__control" type="text" id="default" placeholder="Placeholder">
+                        </div>
+                    </div>
+
+                    <div class="input input_success">
+                        <label for="success" class="input__label">Success</label>
+                        <div class="input__state">
+                            <input class="input__control" type="text" id="success" placeholder="Success">
+                            <svg class="input__icon input__icon_success" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg" style="right: 220px;">
+                                <path
+                                    d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18457 2.99721 7.13633 4.39828 5.49707C5.79935 3.85782 7.69279 2.71538 9.79619 2.24015C11.8996 1.76491 14.1003 1.98234 16.07 2.86"
+                                    stroke="#374FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M22 4L12 14.01L9 11.01" stroke="#374FC7" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
                         </div>
                     </div>
 
-                    <div class="tab__content" id="headerTab3-content">
-                        <h1>333</h1>
-                        <div class="main__container">
-                            <div class="main__card"><a href="05-lection3/01-tooltip/index.html">link</a></div>
-                            <div class="main__card"><a href="05-lection3/02-modal/index.html">link</a></div>
 
+                    <div class="input input_flex">
+                        <label for="filled" class="input__label">Label</label>
+                        <div class="input__state">
+                            <input class="input__control" type="text" id="filled" placeholder="Filled Input">
                         </div>
                     </div>
-                    <div class="tab__content" id="headerTab4-content">
-                        <div class="main__container">
-                            <div class="main__card"><a href="05-lection3/01-tooltip/index.html">link</a></div>
-                            <div class="main__card"><a href="05-lection3/02-modal/index.html">link</a></div>
+
+
+
+                    <div class="input input_error">
+                        <label for="error" class="input__label">Label</label>
+                        <div class="input__state">
+                            <input class="input__control input__control_error" type="text" id="error"
+                                placeholder="Error">
+                            <svg class="input__icon input__icon_error" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg" style="right: 220px;">
+                                <path
+                                    d="M10.29 3.86001L1.82 18C1.64537 18.3024 1.55296 18.6453 1.55199 18.9945C1.55101 19.3437 1.64149 19.6871 1.81442 19.9905C1.98736 20.2939 2.23672 20.5468 2.53771 20.7239C2.83869 20.901 3.1808 20.9962 3.53 21H20.47C20.8192 20.9962 21.1613 20.901 21.4623 20.7239C21.7633 20.5468 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86001C13.5317 3.56611 13.2807 3.32313 12.9812 3.15449C12.6817 2.98585 12.3437 2.89726 12 2.89726C11.6563 2.89726 11.3183 2.98585 11.0188 3.15449C10.7193 3.32313 10.4683 3.56611 10.29 3.86001V3.86001Z"
+                                    stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 9V13" stroke="#F03D3E" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 16V16.5" stroke="#F03D3E" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
                         </div>
                     </div>
-            
+                    </div>
+
+                </div>
+                <div class="tab__content" id="headerTab4-content">
+                    <div class="main__container" style="margin-bottom: 2rem;">
+                        <a href="pages/ModalTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    <button class="button button_primary">Open modal</button>
+                                </div>
+                                <div class="card__footer">
+                                    <h4 class="card__header">Modal</h4>
+                                    <p class="card__text">Organism</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="pages/HistogramTemplate.html" class="main__link">
+                            <div class="main__card">
+                                <div class="card__body">
+                                    <div class="histogram histogram_width-100">
+                                        <div class="histogram__header">
+                                            <h3 class="histogram__title">Total orders</h3>
+                                            <p class="histogram__link">View all</p>
+                                        </div>
+                                        <h4 class="histogram__total">50254</h4>
+                                        <div class="histogram__items">
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_short"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_short"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_short"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_high"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_low"></div>
+                                            <div class="histogram__item histogram__item_mid"></div>
+                                            <div class="histogram__item histogram__item_short"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <h4 class="card__header">Histogram</h4>
+                                    <p class="card__text">Organism</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <h2 class="modal__title_main">MODAL</h2>
+                    <div class="modal" id="modal">
+                        <div class="modal__container">
+                            <svg class="modal__cross" id="modal-close" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4714 3.52861C12.7318 3.78896 12.7318 4.21107 12.4714 4.47141L4.47141 12.4714C4.21107 12.7318 3.78896 12.7318 3.52861 12.4714C3.26826 12.2111 3.26826 11.789 3.52861 11.5286L11.5286 3.52861C11.789 3.26826 12.2111 3.26826 12.4714 3.52861Z" fill="#495057"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52861 3.52861C3.78896 3.26826 4.21107 3.26826 4.47141 3.52861L12.4714 11.5286C12.7318 11.789 12.7318 12.2111 12.4714 12.4714C12.2111 12.7318 11.789 12.7318 11.5286 12.4714L3.52861 4.47141C3.26826 4.21107 3.26826 3.78896 3.52861 3.52861Z" fill="#495057"/>
+                                </svg>                                       
+                            <h2 class="modal__title">Modal title</h2>
+                            <p class="modal__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        </div>
+                    </div>
+                    <button class="button button_primary" id="modal-open">Open modal</button>
+                
+                    <h2 class="accordion__title" style="margin-top: 20px;">ACCORDION</h2>
+                    <div class="accordion">
+                        <details class="accordion__item">
+                            <summary class="accordion__summary">
+                                Accordion item 1
+                            </summary>
+                            <div class="according__content">
+                                <p class="according__text">
+                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                                    officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+                                    amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                    Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt
+                                    nostrud amet.
+                                </p>
+                            </div>
+                        </details>
+                        <details class="accordion__item">
+                            <summary class="accordion__summary">
+                                Accordion item 2
+                            </summary>
+                            <div class="according__content">
+                                <p class="according__text">
+                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                                    officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+                                    amet.
+                                </p>
+                            </div>
+                        </details>
+                        <details class="accordion__item">
+                            <summary class="accordion__summary">
+                                Accordion item3
+                            </summary>
+                            <div class="according__content">
+                                <p class="according__text">
+                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                                    officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+                                    amet.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
             </main>
         </div>
     </section>
 
-
-
-    <section class="footerBlock">
     <footer class="footer">
-        <h2 class="footer__title">About</h2>
-        <p class="footer__text">This project is a collection of professionally designed, pre-built, fully responsive
-            HTML snippets you can drop into your projects. Get started by checking out our free preview components,
-            or browsing the PNG previews in the categories you're most curious about.</p>
+        <section class="footerBlock">
+            <h2 class="footer__title">About</h2>
+            <p class="footer__text" style="text-transform: none;">This project is a collection of professionally
+                designed, pre-built, fully responsive
+                HTML snippets you can drop into your projects. Get started by checking out our free preview components,
+                or browsing the PNG previews in the categories you're most curious about.</p>
+        </section>
     </footer>
-</section>
+
     <script src="10-lection8/01-theme-changer/theme-changer.js"></script>
+    <script src="05-lection3/02-modal/index.js"></script>
     <script>
         // получаем все необходимые элементы
-const tabInputs = document.querySelectorAll('.tabs__input');
-const tabContents = document.querySelectorAll('.tab__content');
+        const tabInputs = document.querySelectorAll('.tabs__input');
+        const tabContents = document.querySelectorAll('.tab__content');
 
-// добавляем обработчики на элементы управления
-tabInputs.forEach((input) => {
-  input.addEventListener('click', () => {
-    // скрываем все вкладки
-    tabContents.forEach((content) => {
-      content.classList.remove('active');
-    });
+        // добавляем обработчики на элементы управления
+        tabInputs.forEach((input) => {
+            input.addEventListener('click', () => {
+                // скрываем все вкладки
+                tabContents.forEach((content) => {
+                    content.classList.remove('active');
+                });
 
-    // отображаем содержимое выбранной вкладки
-    const selectedTabContent = document.querySelector(`#${input.id}-content`);
-    selectedTabContent.classList.add('active');
-  });
-});
+                // отображаем содержимое выбранной вкладки
+                const selectedTabContent = document.querySelector(`#${input.id}-content`);
+                selectedTabContent.classList.add('active');
+            });
+        });
     </script>
 </body>
 

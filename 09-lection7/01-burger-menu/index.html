@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <!-- Страница бургер-меню -->
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./burger-menu.css">
-        <script defer src="./burger-menu.js"></script>
-    </head>
-    <body>
-      <div class="burger">
-        <input class="burger__toggle" id="burger__toggle" type="checkbox" />
-        <label class="burger__btn" for="burger__toggle">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./burger-menu.css">
+  <!-- <script defer src="./burger-menu.js"></script> -->
+</head>
+
+<body>
+  <div class="burger-wrapper">
+    <input class="burger__toggle" id="burger__toggle" type="checkbox" />
+
+    <div class="burger" id="burger-menu">
+      <div class="burger__header">
+        <label class="burger__btn burger-menu-close" for="burger__toggle">
           <span class="burger__control"></span>
         </label>
-        <div class="burger__box">
-          <svg class="burger__icon" width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_18829_459)">
-            <rect y="1" width="30" height="30" fill="#212429"/>
-            <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
-            <path d="M78 0L110 32H78V0Z" fill="#212429"/>
-            </g>
-            <defs>
+
+        <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_18829_459)">
+            <rect y="1" width="30" height="30" fill="#212429" />
+            <rect x="38" width="32" height="32" rx="16" fill="#212429" />
+            <path d="M78 0L110 32H78V0Z" fill="#212429" />
+          </g>
+          <defs>
             <clipPath id="clip0_18829_459">
-            <rect width="110" height="32" fill="white"/>
+              <rect width="110" height="32" fill="white" />
             </clipPath>
-            </defs>
-            </svg>
-            <hr class="burger__hr">
-            <div class="burger__mode">
-            <p class="burger__title">Dark mode</p>
-            <label class="burger__checkbox">
-              <input class="burger__input" type="checkbox">
-              <span class="burger__state"></span>
-              <span class="burger__text">Off</span>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="burger__box">
+        <hr class="burger__hr">
+        <div class="burger__mode">
+          <p class="burger__title">Dark mode</p>
+          <label class="burger__checkbox">
+            <input class="burger__input" type="checkbox">
+            <span class="burger__state"></span>
+            <span class="burger__text">Off</span>
           </label>
         </div>
         <hr class="burger__hr">
@@ -48,8 +56,14 @@
             <li><a class="burger__item burger__item_home-link" href="#">Main page</a></li>
           </ul>
         </div>
-        </div>
       </div>
+    </div>
+  </div>
 
-    </body>
+
+  <label class="burger__btn burger__btn_left" for="burger__toggle" >
+    <span class="burger__control"></span>
+  </label>
+</body>
+
 </html>

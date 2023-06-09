@@ -1,0 +1,50 @@
+.tab__container {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .tabs {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--grey-2);
+  }
+  
+  .tabs__input {
+    display: none;
+  }
+  
+  .tabs > .tabs__label {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 15px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    position: relative;
+    top: 1px;
+    color: var(--grey-3);
+  }
+  
+  .tabs > label:not(:first-of-type) {
+    border-left: none;
+  }
+  
+  .tabs > input[type="radio"]:checked+label {
+    border-bottom: 5px solid var(--black);
+    color: var(--black);
+  }
+  
+  .tab__content {
+    display: none;
+  }
+  .tab__content_no-border {
+    border-top: none;
+  }
+  
+  .tab__content.active {
+    display: block;
+  }
+  

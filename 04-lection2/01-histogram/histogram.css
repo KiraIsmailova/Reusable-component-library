@@ -17,7 +17,7 @@
 .histogram__title {
     font-size: 16px;
     font-weight: 400;
-    color: #212429;  
+    color: var(--black);  
     opacity: 0.8;
 }
 
@@ -30,7 +30,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
-    color: #212429;
+    color: var(--black); 
     margin-top: 0px;
 }
 
@@ -45,6 +45,21 @@
     margin-right: 1px;
     background-color: var(--purple-light);
     animation: appear 0.6s ease-out;
+}
+
+@keyframes appear {
+    0% {
+        transform: scaleY(0);
+        transform-origin: bottom center;
+    }
+    50% {
+        transform: scaleY(0);
+        transform-origin: bottom center;
+    }
+    100% {
+        transform: scaleY(1);
+        transform-origin: bottom center;
+    }
 }
 
 .histogram__item_high {
