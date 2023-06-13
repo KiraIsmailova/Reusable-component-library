@@ -41,7 +41,7 @@
 }
 
 .histogram__item {
-    flex-basis: 9px;
+    flex-basis: 9%;
     margin-right: 1px;
     background-color: var(--purple-light);
     animation: appear 0.6s ease-out;

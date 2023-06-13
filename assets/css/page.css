@@ -90,3 +90,7 @@
     grid-template-columns: 25% 68% 7%;
   }
 }
+
+.histogram__items_template {
+  justify-content: space-between;
+}

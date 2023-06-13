@@ -1,8 +1,3 @@
-.tab__container {
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
-  
   .tabs {
     width: 100%;
     max-width: 100%;
@@ -10,6 +5,11 @@
     border-bottom: 1px solid var(--grey-2);
   }
   
+  .tab__container {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
   .tabs__input {
     display: none;
   }
@@ -39,9 +39,6 @@
   
   .tab__content {
     display: none;
-  }
-  .tab__content_no-border {
-    border-top: none;
   }
   
   .tab__content.active {
