@@ -1,3 +1,18 @@
+
+.header__block {
+    padding: 25px 0 0;
+}
+
+.header_styles {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--grey-2); 
+}
+
+.header__block .tabs label {
+    margin: 0 30px 10px 0;
+    padding: 0;
+}
+
 .header__title {
     font-family: 'Inter';
     font-style: normal;

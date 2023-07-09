@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="ru">
   <head>
+    <link rel="stylesheet" href="./assets/css/myOwnNormalize.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../style.css">
     <meta charset="UTF-8">
@@ -9,9 +10,58 @@
 
 </style>    
   </head>
-  <body class="page page_inner">
+  <body>
+    <div class="burger-wrapper">
+        <input class="burger__toggle" id="burger__toggle" type="checkbox" />
+    
+        <div class="burger" id="burger-menu">
+          <div class="burger__header">
+            <label class="burger__btn burger-menu-close" for="burger__toggle" id="burger-menu-close">
+              <span class="burger__control"></span>
+            </label>
+            <svg width="110" height="32" viewBox="0 0 110 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+                <g>
+                <rect y="1" width="30" height="30" fill="var(--black)" />
+
+                <rect x="38" width="32" height="32" rx="16" fill="var(--black)" />
+                <path d="M78 0L110 32H78V0Z" fill="var(--black)" />
+              </g>
+        </svg>
+          </div>
+    
+          <div class="burger__box">
+            <hr class="burger__hr">
+            <div class="burger__mode">
+              <p class="burger__title">Dark mode</p>
+              <label class="toggler">
+                <input class="toggler__input" type="checkbox" id="theme-changer">
+                <span class="toggler__state"></span>
+                <span class="toggler__text"></span>
+              </label>
+            </div>
+            <hr class="burger__hr">
+            <div>
+              <h4 class="burger__title burger__title_list">Components</h4>
+              <ul class="burger__list">
+                <li><a class="burger__item" href="ModalTemplate.html">Modal</a></li>
+                <li><a class="burger__item" href="TooltipTemplate.html">Tooltip</a></li>
+                <li><a class="burger__item" href="AvatarTemplate.html">Avatar</a></li>
+                <li><a class="burger__item" href="CalendarTemplate.html">Calendar</a></li>
+                <li><a class="burger__item" href="HistogramTemplate.html">Histogram</a></li>
+                <li><a class="burger__item" href="ButtonsTemplate.html">Custom form elements</a></li>
+                <li><a class="burger__item burger__item_home-link" href="../index.html">Main page</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  <div class="page page_inner">
     <header class="page__header header">
       <div class="header__wrapper">
+        <label class="burger__btn burger__btn_left" for="burger__toggle" >
+          <span class="burger__control"></span>
+        </label>
         <a href="../index.html">
         <div class="header__logo">
             <svg width="110" height="32" viewBox="0 0 110 32" fill="none"
@@ -68,7 +118,7 @@
             </svg>
 
             <label class="toggler">
-                <input class="toggler__input" type="checkbox" id="theme-changer">
+                <input class="toggler__input" type="checkbox" id="theme-change">
                 <span class="toggler__state"></span>
                 <span class="toggler__text"></span>
             </label>
@@ -84,7 +134,7 @@
     <article class="page__main main">
         <section class="template__section">
         <h3 class="template__header">Custom form elements</h3>
-        <div class="customs">
+        <div class="wrap">
             <div class="allcomponents allcomponents_template">
             <div class="checkboxes">
 
@@ -171,7 +221,7 @@
         </div>
         </div>
 
-        <div class="">
+        <div>
         <div class="input">
             <label for="default" class="input__label">Label</label>
             <div class="input__state">
@@ -193,7 +243,7 @@
         
         
         <div class="input">
-            <label for="filled" class="input__label">Label</label>
+            <label for="filled" class="input__label">Focus</label>
             <div class="input__state">
                 <input class="input__control" type="text" id="filled" placeholder="Filled Input">
             </div>
@@ -202,7 +252,7 @@
         
         
         <div class="input input_error">
-            <label for="error" class="input__label">Label</label>
+            <label for="error" class="input__label">Error</label>
             <div class="input__state">
                 <input class="input__control input__control_error" type="text" id="error" placeholder="Error">
               <svg class="input__icon input__icon_error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -322,5 +372,6 @@
         </p>
     </footer>
     <script src="../10-lection8/01-theme-changer/theme-changer.js"></script>
-  </body>
+  </div>
+</body>
 </html>
